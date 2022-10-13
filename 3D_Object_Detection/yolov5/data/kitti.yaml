@@ -1,0 +1,7 @@
+train: /data/hwang/datasets/kitti/train.txt
+val: /data/hwang/datasets/kitti/val.txt
+test: /content/drive/MyDrive/workspace/study/3D_Object_detection/OpenPCDet/data/kittimot/testing/image_02
+
+# Classes
+nc: 8  # number of classes
+names: ['Car', 'Van', 'Truck', 'Pedestrian', 'Person_sitting', 'Cyclist', 'Tram', 'Misc']  # class names
