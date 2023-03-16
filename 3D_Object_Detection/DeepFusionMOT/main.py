@@ -102,7 +102,7 @@ class DeepFusion(object):
 
 if __name__ == '__main__':
     # Define the file name
-    data_root = '/content/drive/MyDrive/workspace/study/3D_Object_detection/OpenPCDet/data/kittimot/training'
+    data_root = '/content/drive/MyDrive/workspace/study/3D_Object_Detection/OpenPCDet/data/kittimot/training'
     detections_name_3D = '3D_pointrcnn_Car_val'
     detections_name_2D = '2D_rrc_Car_val'
 
@@ -123,13 +123,13 @@ if __name__ == '__main__':
     detections_files_2D = sorted(os.listdir(detections_root_2D))
     image_files = sorted(os.listdir(dataset_dir))
     # detection_file_list_3D, num_seq_3D = load_list_from_folder(detections_files_3D, detections_root_3D
-    detection_file_list_3D = [detections_root_3D + '/' + i for i in detections_files_3D[:1]]
+    detection_file_list_3D = [detections_root_3D + '/' + i for i in detections_files_3D]
     num_seq_3D = len(detection_file_list_3D)
     # detection_file_list_2D, num_seq_2D = load_list_from_folder(detections_files_2D, detections_root_2D)
-    detection_file_list_2D = [detections_root_2D + '/' + i for i in detections_files_2D[:1]]
+    detection_file_list_2D = [detections_root_2D + '/' + i for i in detections_files_2D]
     num_seq_2D = len(detection_file_list_2D)
     # image_file_list, _ = load_list_from_folder(image_files, dataset_dir)
-    image_file_list = [dataset_dir + '/' + i for i in image_files[:1]]
+    image_file_list = [dataset_dir + '/' + i for i in image_files]
 
     total_time, total_frames, i = 0.0, 0, 0  # Tracker runtime, total frames and Serial number of the dataset
     tracker = DeepFusion(max_age=25, min_hits=3)  # Tracker initialization
